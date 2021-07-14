@@ -24,5 +24,5 @@ jobs:
       uses: azure/webapps-deploy@v2
       with:
         app-name: 'okta-test-gabe'
-        publish-profile: $
+        publish-profile: 'https://okta-test-gabe.scm.azurewebsites.net'
         package: ./dist/okta-hosted-login

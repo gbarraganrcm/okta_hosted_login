@@ -1,2 +1,2 @@
-ISSUER= 'hhttps://lightboxretestli2.okta.com/oauth2/default'
+ISSUER= 'https://lightboxretestli2.okta.com/oauth2/default'
 CLIENT_ID=0oazwnffwtVGSaT59695

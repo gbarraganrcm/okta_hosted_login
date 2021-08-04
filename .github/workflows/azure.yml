@@ -19,10 +19,10 @@ jobs:
       run: |
         npm install
         npm run build --prod
-        working-directory: .
+      working-directory: .
     - name: 'Deploy to Azure Web App'
       uses: azure/webapps-deploy@v2
       with:
         app-name: 'okta-test-gabe'
-        publish-profile: $
-        package: ./dist/okta-hosted-login
+        publish-profile: '<publishData><publishProfile profileName="okta-test-gabe - Web Deploy" publishMethod="MSDeploy" publishUrl="okta-test-gabe.scm.azurewebsites.net:443" msdeploySite="okta-test-gabe" userName="$okta-test-gabe" userPWD="4ttERnB1zxm7C7Swf2Zhk5QWN3doePX0RwA0aCr00JRx9brdNqWz9MsSE3hS" destinationAppUrl="http://okta-test-gabe.azurewebsites.net" SQLServerDBConnectionString="" mySQLDBConnectionString="" hostingProviderForumLink="" controlPanelLink="http://windows.azure.com" webSystem="WebSites"><databases /></publishProfile><publishProfile profileName="okta-test-gabe - FTP" publishMethod="FTP" publishUrl="ftp://waws-prod-dm1-207.ftp.azurewebsites.windows.net/site/wwwroot" ftpPassiveMode="True" userName="okta-test-gabe\$okta-test-gabe" userPWD="4ttERnB1zxm7C7Swf2Zhk5QWN3doePX0RwA0aCr00JRx9brdNqWz9MsSE3hS" destinationAppUrl="http://okta-test-gabe.azurewebsites.net" SQLServerDBConnectionString="" mySQLDBConnectionString="" hostingProviderForumLink="" controlPanelLink="http://windows.azure.com" webSystem="WebSites"><databases /></publishProfile><publishProfile profileName="okta-test-gabe - Zip Deploy" publishMethod="ZipDeploy" publishUrl="okta-test-gabe.scm.azurewebsites.net:443" userName="$okta-test-gabe" userPWD="4ttERnB1zxm7C7Swf2Zhk5QWN3doePX0RwA0aCr00JRx9brdNqWz9MsSE3hS" destinationAppUrl="http://okta-test-gabe.azurewebsites.net" SQLServerDBConnectionString="" mySQLDBConnectionString="" hostingProviderForumLink="" controlPanelLink="http://windows.azure.com" webSystem="WebSites"><databases /></publishProfile></publishData>'
+        package: ./dist/
